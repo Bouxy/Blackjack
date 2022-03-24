@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'cd-black';
+    src: url(font/creato_display/CreatoDisplay-BlackItalic.otf);
+}
+@font-face {
+    font-family: 'cd-reg';
+    src: url(font/creato_display/CreatoDisplay-Regular.otf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --gap: 12rem;
+    --space: 2rem;
+    --color-1: goldenrod;
+    --color-2: #016f32;
+    --color-3: #fff;
+    --dark: #333;
+}
+html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+/* div {
+    border: 1px solid white;
+} */
+button {
+    font-size: 2vw;
+    text-transform: uppercase;
+    width: 80%;
+    height: 25%;
+    color: var(--dark);
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+}
+a {
+    color: var(--color-3);
+}
+.card {
+    width: 8rem;
+    margin-right: 0.5rem;
+}
+.p-card {
+    width: 12rem;
+}
+body {
+    font-family: 'cd-reg';
+    background-image: url('table.png');
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    color: var(--color-3);
+}
+.game-section {
+    display: grid;
+    grid-template-rows: 3fr 4fr;
+}
+.not-user {
+    display: flex;
+}
+h1 {
+    font-family: 'cd-black';
+    font-size: 7rem;
+    margin-left: 2rem;
+}
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: -1.5rem;
+    margin-left: 2rem;
+}
+.bank-cards {
+    display: flex;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 15rem;
+}
+.pile {
+    width: 10rem;
+    display: flex;
+    align-items: flex-end;
+}
+#pile {
+    width: 90%;
+}
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sum {
+    background: var(--color-3);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    color: var(--dark);
+    font-family: 'cd-black';
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+    margin-left: 2rem;
+    order: 100;
+}
+#sum {
+    margin-right: auto;
+}
+#player-cards > img:first-of-type {
+    margin-left: auto;
+}
+.split {
+    margin-left: 1rem !important;
+    margin-right: auto;
+    order: -1;
+}
+.action-section {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: url(wooden-textured-background.jpg);
+    border-left: 2px solid var(--color-3);
+}
+#question-el {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url(wooden-textured-background.jpg);
+    border-left: 2px solid var(--color-3);
+    display: none;
+}
+#question-el[data-visible='true'] {
+    display: flex;
+}
+.credits-section {
+    background-image: url(table-wood.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+.name {
+    display: flex;
+    align-items: flex-end;
+}
+h2 {
+    font-family: 'cd-black';
+    font-size: 4rem;
+    margin-left: 2rem;
+}
+.player-credit {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.bet-credit {
+    display: flex;
+    justify-content: space-evenly;
+}
+.bet-credit > div {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+.bet-credit > div:first-of-type {
+    width: 15%;
+    border: 3px dotted var(--color-1);
+    color: var(--color-1);
+    font-size: 2rem;
+}
+.bet-credit > div:last-of-type {
+    width: 25%;
+}
+.chip {
+    background-image: url(chip.svg);
+    color: var(--color-3);
+    background-repeat: no-repeat;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 2rem;
+}
+#bet-chips[data-visible='false'] {
+    display: none;
+}
+.assurance[data-visible='false'] {
+    display: none;
+}
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+#message {
+    padding: 0.5rem 3rem;
+    background-color: white;
+    transition: background-color 1s ease;
+}
+#fs {
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}

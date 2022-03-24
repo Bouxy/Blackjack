@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <div class="first-container game-section">
+            <div class="second-container not-user">
+                <div class="third-section title">
+                    <h1>Blackjack</h1>
+                    <p class="subtitle">Have fun</p>
+                </div>
+                <div class="third-section bank-cards">
+                    <!--<img src="cards/0/5.svg" class="card" />
+                    <img src="cards/1/1.svg" class="card" />
+                    <img src="cards/3/13.svg" class="card" />
+                    <div class="sum" id="bank-sum"></div>-->
+                </div>
+                <div class="third-section pile">
+                    <img id="pile" src="pile.svg" alt="pile de cartes" />
+                </div>
+            </div>
+            <div class="second-container user" id="player-cards">
+                <!--<img src="cards/0/5.svg" class="card p-card" />
+                <img src="cards/1/1.svg" class="card p-card" />
+                <img src="cards/3/13.svg" class="card p-card" />
+                <div class="sum" id="sum"></div>-->
+                <!--<img src="cards/0/5.svg" class="card p-card split" />-->
+            </div>
+        </div>
+        <div class="first-container action-section">
+            <button id="start-el" onclick="startGame()">Start<br />game</button>
+            <button id="new-card" onclick="newCard()">New<br />card</button>
+            <button id="finish" onclick="finish()">Finish</button>
+            <div id="question-el" data-visible="false">
+                <button id="yes" onclick="respondedYes()">Yes</button>
+                <button id="no" onclick="responded()">No</button>
+            </div>
+        </div>
+        <div class="first-container credits-section">
+            <div class="second-container empty"></div>
+
+            <div class="second-container bet-credit">
+                <div class="third-section bet">
+                    Bet
+                    <div class="chip" id="bet-chips" data-visible="false"></div>
+                </div>
+                <div class="third-section assurance" data-visible="false">
+                    <p id="assurance">insurance</p>
+                    <div class="chip" id="assurance-chips"></div>
+                </div>
+            </div>
+            <div class="second-container player-credit">
+                <h2 id="player-name">Janis</h2>
+                <div class="chip" id="player-chips"></div>
+            </div>
+            <div class="second-container message">
+                <p id="message"></p>
+            </div>
+        </div>
+        <script src="index.js"></script>
+        <!--Crédits :
+            https://www.vecteezy.com/free-vector/casino-chips">Casino Chips Vectors by vecteezy
+            https://commons.wikimedia.org/wiki/Category:SVG_English_pattern_playing_cards
+        -->
+    </body>
+</html>
